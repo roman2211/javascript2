@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+<script>
+
+    //////  CONTAINER  ///////
+
+    /**
+     * Контейнер
+     * @constructor
+     */
+    function Container() {
+        this.id = '';
+        this.className = '';
+        this.htmlCode = '';
+    }
+
+    /**
+     * Remove
+     */
+    Container.prototype.remove = function (id) {
+        id = id || this.id; // Если передали внешний id, то будем искать его, иначе - внутренний
+
+        var elem = document.getElementById(id);
+
+        if (elem)
+            elem.parentNode.removeChild(elem);
+    };
+
+    /**
+     * render
+     * @returns {string}
+     */
+    Container.prototype.render = function () {
+        return this.htmlCode;
+    };
+
+    //////  MENU  ///////
+
+    /**
+     * Menu
+     * @param myId
+     * @param myClass
+     * @param myItems
+     * @constructor
+     */
+    function Menu(myId, myClass, myItems) {
+        Container.call(this);
+
+        this.id = myId;
+        this.className = myClass;
+        this.items = myItems;
+    }
+
+    Menu.prototype = Object.create(Container.prototype);
+    Menu.prototype.constructor = Menu;
+
+    /**
+     * Menu render
+     * @returns {string}
+     */
+    Menu.prototype.render = function () {
+        var res = '<ul id="' + this.id + '" class="' + this.className + '">';
+
+        for (var item in this.items) {
+            if (this.items.hasOwnProperty(item) && (this.items[item] instanceof MenuItem || this.items[item] instanceof SubMenu)) {
+                res += this.items[item].render();
+            }
+        }
+        res += '</ul>';
+
+        return res;
+    };
+
+    //////  SUBMENU  ///////
+
+    /**
+     * SubMenu
+     * @param myId
+     * @param myClass
+     * @param myItems
+     * @constructor
+     */
+    function SubMenu(myId, myClass, myItems) {
+        Menu.call(this, myId, myClass, myItems);
+    }
+
+    SubMenu.prototype = Object.create(Menu.prototype);
+    SubMenu.prototype.constructor = SubMenu;
+
+    /**
+     * SubMenu render
+     * @returns {string}
+     */
+    SubMenu.prototype.render = function () {
+        return '<li>' + Menu.prototype.render.call(this) + '</li>';
+    };
+
+    //////  MENUITEM  ///////
+
+    /**
+     * MenuItem
+     * @param myHref
+     * @param myName
+     * @constructor
+     */
+    function MenuItem(myHref, myName) {
+        Container.call(this);
+        this.className = 'menu-item';
+        this.href = myHref;
+        this.name = myName;
+    }
+
+    MenuItem.prototype = Object.create(Container.prototype);
+    MenuItem.prototype.constructor = MenuItem;
+
+    /**
+     * MenuItem render
+     * @returns {string}
+     */
+    MenuItem.prototype.render = function () {
+        return '<li><a href="' + this.href + '">' + this.name + '</a></li>';
+    };
+
+</script>
+<nav></nav>
+<button id="render">Render</button>
+<button id="remove">Remove</button>
+<script>
+    var menu = new Menu('my_menu', 'my_menu', [
+        new MenuItem('/', 'Главная'),
+        new MenuItem('/about/', 'О нас'),
+        new MenuItem('/contacts', 'Контакты'),
+        new SubMenu('submenu', 'submenu', [
+            new MenuItem('/payment', 'Оплата'),
+            new MenuItem('/delivery', "Доставка")
+        ]),
+        new MenuItem('/catalog', "Каталог")
+    ]);
+
+    document.getElementById('render').addEventListener('click', function () {
+        var nav = document.querySelector('nav');
+        nav.innerHTML = menu.render();
+    });
+
+    document.getElementById('remove').addEventListener('click', function () {
+        menu.remove();
+    });
+
+</script>
+
+</body>
+</html>

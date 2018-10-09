@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamburger</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        p {
+            font-size: 16px;
+        }
+        p span {
+            font-size: 12px;
+            color: #666;
+            font-weight: normal;
+        }
+        label {
+            font-weight: bold;
+        }
+        #result {
+            font-size: 18px;
+            color: black;
+
+        }
+        #result span {
+            color: dodgerblue;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<script>
+    /**
+     * Класс, объекты которого описывают параметры гамбургера.
+     *
+     * @constructor
+     * @param size        Размер
+     * @param stuffing    Начинка
+     * @throws {HamburgerException}  При неправильном использовании
+     */
+    function Hamburger(size, stuffing) {
+        this._toppings = [];
+
+        // Проверяем размер
+        switch (size) {
+            case Hamburger.SIZE_SMALL:
+                this._price = 50;
+                this._calories = 20;
+                break;
+            case Hamburger.SIZE_LARGE:
+                this._price = 100;
+                this._calories = 40;
+                break;
+            default:
+                throw new HamburgerException("Неправильный размер гамбургера: " + size);
+        }
+        this._size = size;
+
+        // Проверяем начинку
+        switch (stuffing) {
+            case Hamburger.STUFFING_CHEESE:
+                this._price += 10;
+                this._calories += 20;
+                break;
+            case Hamburger.STUFFING_SALAD:
+                this._price += 20;
+                this._calories += 5;
+                break;
+            case Hamburger.STUFFING_POTATO:
+                this._price += 15;
+                this._calories += 10;
+                break;
+            default:
+                throw new HamburgerException("Неправильная начинка: " + stuffing);
+        }
+        this._stuffing = stuffing;
+    }
+
+    /* Размеры, виды начинок и добавок */
+    Hamburger.SIZE_SMALL = 1;
+    Hamburger.SIZE_LARGE = 2;
+    Hamburger.STUFFING_CHEESE = 1;
+    Hamburger.STUFFING_SALAD = 2;
+    Hamburger.STUFFING_POTATO = 3;
+    Hamburger.TOPPING_MAYO = 1;
+    Hamburger.TOPPING_SPICE = 2;
+
+    /**
+     * Добавить добавку к гамбургеру. Можно добавить несколько
+     * добавок, при условии, что они разные.
+     *
+     * @param topping     Тип добавки
+     * @throws {HamburgerException}  При неправильном использовании
+     */
+    Hamburger.prototype.addTopping = function (topping) {
+        // Проверяем Топпинг
+        switch (topping) {
+            case Hamburger.TOPPING_MAYO:
+                // Проверяем добавлялся ли топпинг ранее, и если не добавлялся, то добавляем
+                if (this._toppings.indexOf(Hamburger.TOPPING_MAYO) == -1) {
+                    this._toppings.push(Hamburger.TOPPING_MAYO);
+                    this._price += 20;
+                    this._calories += 5;
+                }
+                break;
+            case Hamburger.TOPPING_SPICE:
+                // Проверяем добавлялся ли топпинг ранее, и если не добавлялся, то добавляем
+                if (this._toppings.indexOf(Hamburger.TOPPING_SPICE) == -1) {
+                    this._toppings.push(Hamburger.TOPPING_SPICE);
+                    this._price += 15;
+                }
+                break;
+            default:
+                throw new HamburgerException("Неправильный топпинг: " + topping);
+        }
+    };
+
+    /**
+     * Убрать добавку, при условии, что она ранее была
+     * добавлена.
+     *
+     * @param topping   Тип добавки
+     * @throws {HamburgerException}  При неправильном использовании
+     */
+    Hamburger.prototype.removeTopping = function (topping) {
+        // Проверяем Топпинг
+        switch (topping) {
+            case Hamburger.TOPPING_MAYO:
+                // Проверяем добавлялся ли топпинг ранее
+                if (this._toppings.indexOf(Hamburger.TOPPING_MAYO) >= 0) {
+                    this._toppings.splice(this._toppings.indexOf(Hamburger.TOPPING_MAYO), 1);
+                    this._price -= 20;
+                    this._calories -= 5;
+                }
+                break;
+            case Hamburger.TOPPING_SPICE:
+                // Проверяем добавлялся ли топпинг ранее
+                if (this._toppings.indexOf(Hamburger.TOPPING_SPICE) >= 0) {
+                    this._toppings.splice(this._toppings.indexOf(Hamburger.TOPPING_SPICE), 1);
+                    this._price -= 15;
+                }
+                break;
+            default:
+                throw new HamburgerException("Неправильный топпинг: " + topping);
+        }
+    };
+
+    /**
+     * Получить список добавок.
+     *
+     * @return {Array} Массив добавленных добавок, содержит константы
+     *                 Hamburger.TOPPING_*
+     */
+    Hamburger.prototype.getToppings = function () {
+        return this._toppings;
+    };
+
+    /**
+     * Узнать размер гамбургера
+     *
+     * @return Hamburger.SIZE_*
+     */
+    Hamburger.prototype.getSize = function () {
+        return this._size;
+    };
+
+    /**
+     * Узнать начинку гамбургера
+     *
+     * @return Hamburger.STUFFING_*
+     */
+    Hamburger.prototype.getStuffing = function () {
+        return this._stuffing;
+    };
+
+    /**
+     * Узнать цену гамбургера
+     * @return {Number} Цена в тугриках
+     */
+    Hamburger.prototype.calculatePrice = function () {
+        return this._price;
+    };
+
+    /**
+     * Узнать калорийность
+     * @return {Number} Калорийность в калориях
+     */
+    Hamburger.prototype.calculateCalories = function () {
+        return this._calories;
+    };
+
+    /**
+     * Вернуть гамбургер ввиде строки текста
+     * @return {String} Описание гамбургера
+     */
+    Hamburger.prototype.toString = function () {
+        var res = "Hamburger:\nSize: ";
+        res += (this._size == Hamburger.SIZE_SMALL) ? "Small\n" : "Big\n";
+        res += "Stuffing: ";
+        res += (this._stuffing == Hamburger.STUFFING_CHEESE) ? "Cheese\n"
+            : (this._stuffing == Hamburger.STUFFING_POTATO) ? "Potato\n" : "Salad\n";
+        res += "Toppings: ";
+        res += (this._toppings.length > 0) ?
+            this._toppings.map(function (t) {
+                return t == Hamburger.TOPPING_SPICE ? "Spice" : "Mayonez"
+            }).join(', ') + "\n"
+            : "none\n";
+        res += "Price: " + this._price + " rub\n";
+        res += "Calories: " + this._calories + " ccal";
+
+        return res;
+    };
+
+    /**
+     * Представляет информацию об ошибке в ходе работы с гамбургером.
+     * Подробности хранятся в свойстве message.
+     * @constructor
+     */
+    function HamburgerException(message) {
+        this.name = 'HamburgerException';
+        this.message = message;
+    }
+</script>
+</body>
+<div class="container">
+    <h1>Закажи гамбургер</h1>
+    <p>Собери свой гамбургер - конструктор бутерброда онлайн.</p>
+    <form action="#" method="get">
+        <p>
+            <label for="size">Размер: </label>
+            <select name="size" id="size">
+                <option value="1">Маленький - 50 руб, 20 ккал</option>
+                <option value="2">Большой - 100 руб, 40 ккал</option>
+            </select>
+        </p>
+        <p>
+            <label>Начинка: <input type="radio" name="stuffing" value="1" checked> Сыр <span>(10 руб, 20 ккал)</span></label>
+            <label><input type="radio" name="stuffing" value="2"> Салат <span>(20 руб, 5 ккал)</span></label>
+            <label><input type="radio" name="stuffing" value="3"> Картофель <span>(15 руб, 10 ккал)</span></label>
+        </p>
+        <p>
+            <label>Топпинги: <input type="checkbox" name="topping_spice" value="1"> Специи <span>(15 руб, 0 ккал)</span></label>
+            <label><input type="checkbox" name="topping_mayo" value="2"> Майонез <span>(20 руб, 5 ккал)</span></label>
+        </p>
+        <p><input type="submit" value="Рассчитать"></p>
+        <p id="result"></p>
+        <pre id="pre"></pre>
+    </form>
+</div>
+<script>
+    window.onload = function() {
+        document.forms[0].onsubmit = function () {
+            try {
+                var burger = new Hamburger(+this.size.value, +this.stuffing.value);
+
+                if (this.topping_mayo.checked) {
+                    burger.addTopping(Hamburger.TOPPING_MAYO);
+                }
+
+                if (this.topping_spice.checked) {
+                    burger.addTopping(Hamburger.TOPPING_SPICE);
+                }
+
+                document.getElementById("result").innerHTML = "Ваш гамбургер: Стоимость: <span>" + burger.calculatePrice()
+                    + " руб</span>, Калории: <span>" + burger.calculateCalories() + " ккал</span>";
+
+                document.getElementById("pre").innerHTML = "Bon Appetit!\n----------\n" + burger + "\n----------\n";
+            }
+            catch (e) {
+                console.error(e.message);
+            }
+            return false;
+        };
+    }
+</script>
+</html>
