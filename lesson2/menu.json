@@ -1,0 +1,50 @@
+{
+  "id": "my_menu",
+  "class": "my_menu",
+  "items": [
+    {
+      "href": "/",
+      "name": "Главная"
+    },
+    {
+      "href": "/catalog/",
+      "name": "Каталог",
+      "items": [
+        {
+          "href": "/catalog/boots/",
+          "name": "Ботинки",
+          "items": [
+            {
+              "href": "/catalog/boots/man/",
+              "name": "Мужские"
+            },
+            {
+              "href": "/catalog/boots/woman/",
+              "name": "Женские"
+            }
+          ]
+        },
+        {
+          "href": "/catalog/cloth/",
+          "name": "Футболки"
+        },
+        {
+          "href": "/catalog/jeans/",
+          "name": "Джинсы"
+        }
+      ]
+    },
+    {
+      "href": "/payment",
+      "name": "Оплата"
+    },
+    {
+      "href": "/delivery",
+      "name": "Доставка"
+    },
+    {
+      "href": "/contacts",
+      "name": "Контакты"
+    }
+  ]
+}
