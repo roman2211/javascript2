@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Gallery</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script>
+        /**
+         * Объект галлереи
+         * @param elementId - элемент для отрисовки изображений
+         * @constructor
+         */
+        function Gallery(elementId) {
+            var images = [];
+            var element = document.getElementById(elementId);
+            if (!element)
+                throw Error("Gallery element not found");
+
+            var xhr = new XMLHttpRequest();
+            this.load = load;
+
+            /**
+             * Загрузка файла со списком изображений
+             * @param url - путь к загружаемому файлу
+             */
+            function load(url) {
+                xhr.open('GET', url, true);
+                xhr.send();
+                xhr.onreadystatechange = onLoadGallery;
+            }
+
+            /**
+             * Обработчик загруженного файла
+             */
+            function onLoadGallery() {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    images = JSON.parse(xhr.responseText);
+                    drawThumbs();
+                }
+            }
+
+            /**
+             * Очистка содержимого элемента в DOM стиле
+             */
+            function clear(element) {
+                while (element.firstChild) {
+                    element.removeChild(element.firstChild);
+                }
+            }
+
+            /**
+             * Отрисовка миниатюр, может вызываться по событию клика
+             */
+            function drawThumbs(e) {
+                clear(element);
+                element.classList.toggle('image', false); // Убираем класс
+
+                var h = document.createElement('h1');
+                h.innerText = "Gallery";
+                element.appendChild(h);
+
+                var p = document.createElement('p');
+                p.innerText = 'Миниатюры фотографий';
+                element.appendChild(p);
+
+                images.forEach(function (value, key) {
+                    var a = document.createElement('a');
+                    a.href = value.full;
+                    a.setAttribute('data-key', String(key));
+
+                    var img = document.createElement('img');
+                    img.src = value.thumb;
+                    img.alt = value.name;
+                    img.title = value.name;
+
+                    a.appendChild(img);
+                    a.onclick = drawImage;
+                    element.appendChild(a);
+                });
+
+                if (e)
+                    e.preventDefault();
+
+                return false;
+            }
+
+            /**
+             * Отрисовка изображения, срабатывает по клику на миниатюре
+             */
+            function drawImage(e) {
+                clear(element);
+                element.classList.toggle('image', true); // Добавляем класс
+
+                var h = document.createElement('h1');
+                h.innerText = "Image";
+                element.appendChild(h);
+
+                var p = document.createElement('p');
+                var key = e.currentTarget.dataset.key;
+                p.innerText = images[key].name;
+                element.appendChild(p);
+
+                var img = document.createElement('img');
+                img.src = images[key].full;
+                img.alt = images[key].name;
+                img.title = images[key].name;
+                element.appendChild(img);
+
+                var a = document.createElement('a');
+                a.innerText = 'Закрыть';
+                a.href = '#';
+                a.onclick = drawThumbs;
+                element.appendChild(a);
+
+                e.preventDefault();
+                return false;
+            }
+        }
+
+        window.onload = function () {
+            var gal = new Gallery('gallery');
+            gal.load('gallery.json');
+        };
+    </script>
+</head>
+<body>
+<div class="gallery clearfix" id="gallery"></div>
+</body>
+</html>

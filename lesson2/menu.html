@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+<script>
+
+    //////  CONTAINER  ///////
+
+    /**
+     * Контейнер
+     * @constructor
+     */
+    function Container() {
+        this.id = '';
+        this.className = '';
+        this.htmlCode = '';
+    }
+
+    /**
+     * Remove
+     */
+    Container.prototype.remove = function (id) {
+        id = id || this.id; // Если передали внешний id, то будем искать его, иначе - внутренний
+
+        var elem = document.getElementById(id);
+
+        if (elem)
+            elem.parentNode.removeChild(elem);
+    };
+
+    /**
+     * render
+     * @returns {string}
+     */
+    Container.prototype.render = function () {
+        return this.htmlCode;
+    };
+
+    //////  MENU  ///////
+
+    /**
+     * Menu
+     * @param url
+     * @constructor
+     */
+    function Menu(url) {
+        Container.call(this);
+
+        this.id = '';
+        this.className = '';
+        this.items = [];
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.send();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                var result = JSON.parse(xhr.responseText);
+                this.id = result.id;
+                this.className = result.class;
+                this.items = result.items.map(function mi(value) {
+                   if (value.items) {
+                       value.items = value.items.map(mi);
+                       return new MenuItem(value.href, value.name, value.items);
+                   }
+                   return new MenuItem(value.href, value.name);
+                });
+            }
+        }.bind(this);
+
+
+    }
+
+    Menu.prototype = Object.create(Container.prototype);
+    Menu.prototype.constructor = Menu;
+
+    /**
+     * Menu render
+     * @returns {string}
+     */
+    Menu.prototype.render = function () {
+        var res = '<ul id="' + this.id + '" class="' + this.className + '">';
+
+        for (var item in this.items) {
+            if (this.items.hasOwnProperty(item) && this.items[item] instanceof MenuItem) {
+                res += this.items[item].render();
+            }
+        }
+        res += '</ul>';
+
+        return res;
+    };
+
+    //////  MENUITEM  ///////
+
+    /**
+     * MenuItem
+     * @param myHref
+     * @param myName
+     * @param subMenu
+     * @constructor
+     */
+    function MenuItem(myHref, myName, subMenu) {
+        Container.call(this);
+        this.className = 'menu-item';
+        this.href = myHref;
+        this.name = myName;
+        this.items = subMenu;
+    }
+
+    MenuItem.prototype = Object.create(Container.prototype);
+    MenuItem.prototype.constructor = MenuItem;
+
+    /**
+     * MenuItem render
+     * @returns {string}
+     */
+    MenuItem.prototype.render = function () {
+        var res = '<li><a href="' + this.href + '">' + this.name + '</a>';
+        if (this.items) {
+            res += '<ul>';
+            for (var item in this.items) {
+                if (this.items.hasOwnProperty(item) && this.items[item] instanceof MenuItem) {
+                    res += this.items[item].render();
+                }
+            }
+            res += '</ul>';
+        }
+        res += '</li>';
+        return res;
+    };
+
+</script>
+<nav></nav>
+<button id="render">Render</button>
+<button id="remove">Remove</button>
+<script>
+    var menu = new Menu('menu.json');
+
+    document.getElementById('render').addEventListener('click', function () {
+        var nav = document.querySelector('nav');
+        nav.innerHTML = menu.render();
+    });
+
+    document.getElementById('remove').addEventListener('click', function () {
+        menu.remove();
+    });
+
+</script>
+
+</body>
+</html>
