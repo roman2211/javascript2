@@ -1,0 +1,35 @@
+#tabs {
+	max-width: 700px;
+	margin: 0 0 30px;
+}
+
+ul li {
+	display: inline-block;
+	padding: 10px 15px;
+	background: #E6641E;
+	border: solid #E6641E;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+	font: 14px Roboto, sans-serif;
+}
+
+ul li:hover {
+	background: #EE8953;
+}
+
+ul li.active {
+	background: #fff;
+	color: #000;
+}
+
+.tabs__content {
+	padding: 7px 15px;
+}
+
+.info {
+  	display: none;
+}
+.info.active {
+  	display: block;
+}
