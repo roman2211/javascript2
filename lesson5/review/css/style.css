@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.fieldSet {
+  margin: 0 auto;
+  width: 33%;
+  padding-left: 10px; }
+  .fieldSet .description_field {
+    display: block;
+    float: left;
+    width: 100px; }
+  .fieldSet div {
+    margin: 5px 0; }
+  .fieldSet #addReview {
+    margin-bottom: 5px; }
+
+.statusBox label {
+  float: left; }
+.statusBox textarea {
+  resize: none; }
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto; }
+  table tr:nth-child(even) {
+    background-color: gainsboro; }
+  table tr th {
+    border: 1px solid #000; }
+  table tr td {
+    border: 1px solid #000;
+    padding: 2px 5px; }
+    table tr td:last-child {
+      width: 10px;
+      background-color: indianred;
+      background-image: url(../img/wrong.png);
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-size: 0; }
+  table .approved td:last-child {
+    width: 10px;
+    background-color: green;
+    background-image: url(../img/ok.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0; }
+
+/*# sourceMappingURL=style.css.map */
