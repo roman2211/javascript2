@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Work 3</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<h1>Урок 3. Валидация форм</h1>
+
+
+    <form action="#" class="contacts">
+      
+      <label for="name">Name: </label>
+      <input id="name" type="text" placeholder="Ведите ваше имя" required>
+      <div class="messageWrong hidden">
+        <div class="messageWrong_triangle"></div><div class="messageWrong_text">Поле заполнено неправильно</div>
+      </div>
+      <br>
+      <label for="tel">Telephone number: </label>
+      <input id="tel" type="tel" placeholder="+7(000)000-0000" required>
+      <div class="messageWrong hidden">
+        <div class="messageWrong_triangle"></div><div class="messageWrong_text">Поле заполнено неправильно</div>
+      </div>
+      <br>
+      <label for="mail">Email: </label>
+      <input id="mail" type="email" placeholder="Введите вашу почту" required>
+      <div class="messageWrong hidden">
+        <div class="messageWrong_triangle"></div><div class="messageWrong_text">Поле заполнено неправильно</div>
+      </div>
+      <br>
+      <label for="text">Message: </label>
+      <input id="text" type="text" placeholder="your message">
+      <br>
+      <input type="submit" value="Отправить">
+      <input type="reset" value="Reset">
+    </form>
+  
+
+<script src="js/task.js"></script>
+
+</body>
+</html>
+
