@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Work 6</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <!-- build:css css/minified.css -->
+  <link rel="stylesheet" href="styles/style.css">
+  <!-- endbuild -->
+</head>
+<body>
+<h3>Home Work 6</h3>
+<fieldset>
+  <legend><h4>Задание 1</h4></legend>
+  <h4>В форму обратной связи добавить следующие поля:</h4>
+  <ul>
+    <li>поле даты рождения;</li>
+    <li>ошибочные поля подсветить с помощью какого-нибудь эффекта, например, Bounce.</li>
+    <li>все возвращаемые ошибки выводить с помощью виджета Dialog.</li>
+  </ul>
+  <fieldset id="fieldsetInput">
+    <form action="#" class="contacts">
+      <div class="input_fields">
+        <label for="name">Name: </label>
+        <input id="name" type="text" placeholder="your name" required>
+        <br>
+        <div>
+          <label for="date">Date of birth: </label>
+          <input id="date" type="text" placeholder="dd.mm.yyyy" required>
+        </div>
+        <label for="tel">Telephone number: </label>
+        <input id="tel" type="tel" placeholder="+7(123)456-7890" required>
+        <br>
+        <label for="mail">Email: </label>
+        <input id="mail" type="email" placeholder="email@mail.ru" required>
+        <br>
+        <label for="text">Message: </label>
+        <input id="text" type="text" placeholder="your message">
+        <br>
+        <div id="city_input_form">
+          <label for="city_input" class="acc__label">City: </label>
+          <input type="text" id="city_input" placeholder="input city" required>
+          <div class="loader">
+            <div class="container">
+              <span id="cog-0"></span>
+              <span id="cog-45"></span>
+              <span id="cog-90"></span>
+              <span id="cog-135"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Отправить">
+      <input type="reset" value="Reset">
+    </form>
+  </fieldset>
+</fieldset>
+<fieldset>
+  <legend><h4>Задание 2</h4></legend>
+  <h4>Создать карусель популярных товаров в шапке.</h4>
+  <ul>
+    <li>c помощью jQuery UI добавить возможность перемещать товар прямо в корзину мышью;</li>
+  </ul>
+  <fieldset>
+    <div class="cart_block">
+      <div class="cart"></div>
+      <div class="cart_info">
+        <span>Total sum:</span>
+        <span class="total_sum">0</span>
+        <br>
+        <span>Items:</span>
+        <span class="total_items">0</span>
+      </div>
+    </div>
+    <div class="carousel_block"></div>
+  </fieldset>
+</fieldset>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!-- build:js scripts/main.js -->
+<script src="scripts/task1.js"></script>
+<script src="scripts/task2.js"></script>
+<!-- endbuild -->
+</body>
+</html>
