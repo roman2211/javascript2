@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reviews</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<fieldset class="fieldSet">
+  <form action="" id="inputForm">
+    <div>
+      <label for="id_user" class="description_field">User Id:</label>
+      <input id="id_user" type="text" class="input_field">
+    </div>
+    <div>
+      <label for="id_comment" class="description_field">Comment Id:</label>
+      <input id="id_comment" type="text" class="input_field">
+    </div>
+    <div>
+      <label for="text" class="description_field">Text:</label>
+      <textarea name="" id="text" cols="30" rows="5" class="input_field"></textarea>
+    </div>
+    <div>
+      <input type="button" value="Add review" id="addReview">
+      <input type="button" value="Approve review" id="approveReview">
+      <input type="button" value="Delete review" id="deleteReview">
+      <input type="button" value="Show review" id="showReview">
+    </div>
+  </form>
+</fieldset>
+<fieldset class="fieldSet">
+  <div class="statusBox">
+    <label for="status" class="description_field">Status:</label>
+    <textarea name="" id="status" cols="30" rows="3" disabled readonly></textarea>
+  </div>
+</fieldset>
+<div id="tableMessage"></div>
+<script src="js/script.js"></script>
+</body>
+</html>
