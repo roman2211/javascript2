@@ -1,0 +1,252 @@
+button {
+  width: 65px; }
+
+textarea {
+  width: 317px;
+  height: 110px; }
+
+.contacts label {
+  width: 130px;
+  display: inline-block;
+  margin: 6px; }
+
+.data_transfer {
+  position: relative; }
+  .data_transfer:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: white;
+    opacity: 0.7; }
+  .data_transfer:after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    left: 49%;
+    top: 43%;
+    z-index: 2;
+    border-radius: 6px;
+    animation: spin 1s linear infinite; }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    background-color: seagreen; }
+  50% {
+    transform: rotate(180deg);
+    background-color: green; }
+  100% {
+    transform: rotate(360deg);
+    background-color: seagreen; } }
+.false {
+  outline: none;
+  border: 2px solid red; }
+
+#dialog span {
+  color: indianred; }
+
+.messageWrong {
+  display: inline-block;
+  animation: appearing 1s ease-in-out; }
+  .messageWrong div {
+    display: inline-block; }
+  .messageWrong .messageWrong_triangle {
+    border: 7px solid transparent;
+    border-right: 12px solid green; }
+  .messageWrong .messageWrong_text {
+    background-color: gold; }
+@keyframes appearing {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 100; } }
+.hidden {
+  display: none; }
+
+#city_input_form {
+  position: relative; }
+  #city_input_form #city_list {
+    position: absolute;
+    top: 27px;
+    left: 146px; }
+  #city_input_form #city_input {
+    text-transform: capitalize;
+    outline: none; }
+    #city_input_form #city_input:active {
+      outline: none; }
+
+.wrong_input, .wrong_city, .wrong_date {
+  position: relative; }
+  .wrong_input input, .wrong_city input, .wrong_date input {
+    border: 1px solid red; }
+  .wrong_input:before, .wrong_city:before, .wrong_date:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 20px;
+    top: 6px;
+    left: 321px;
+    background-color: indianred;
+    box-shadow: 0 0 10px #000000;
+    width: 20px;
+    height: 20px;
+    opacity: 1; }
+  .wrong_input:after, .wrong_city:after, .wrong_date:after {
+    content: 'Only russian letters!';
+    position: absolute;
+    border-radius: 6px;
+    top: 6px;
+    left: 343px;
+    background-color: indianred;
+    opacity: 0.8; }
+
+.wrong_city:after {
+  content: 'No such city in data-base!'; }
+
+.wrong_date:after {
+  content: 'Choose another date!'; }
+
+.loader {
+  display: none; }
+
+.container {
+  position: absolute;
+  left: 309px;
+  top: 15px;
+  height: auto;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+.container span {
+  position: absolute;
+  height: 22px;
+  width: 4px;
+  background: #333; }
+
+#cog-0 {
+  position: absolute;
+  transform: rotate(0deg); }
+
+#cog-45 {
+  position: absolute;
+  transform: rotate(45deg); }
+
+#cog-90 {
+  position: absolute;
+  transform: rotate(90deg); }
+
+#cog-135 {
+  position: absolute;
+  transform: rotate(135deg); }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+.cart_block {
+  display: flex;
+  justify-content: flex-end; }
+
+.cart {
+  background-image: url(../img/cart.png);
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  position: relative;
+  margin-right: 20px; }
+
+.drag_to_cart {
+  border-radius: 3px;
+  box-shadow: 10px 10px 17px -1px rgba(0, 0, 0, 0.75);
+  background-color: gainsboro;
+  animation: beating 1s linear infinite; }
+@keyframes beating {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1.1, 1.1); }
+  100% {
+    transform: scale(1, 1); } }
+.overcart {
+  animation: none;
+  background-color: darkseagreen;
+  transform: scale(1.1, 1.1); }
+
+.carousel_block {
+  display: inline-block;
+  margin-top: 30px;
+  text-align: center;
+  width: 700px; }
+
+.carousel {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  clear: both; }
+
+.item {
+  border: 1px solid #000;
+  padding: 5px;
+  width: 110px;
+  height: 75px;
+  margin: 0 15px;
+  background-color: seagreen;
+  border-radius: 5px;
+  text-align: left; }
+  .item:hover {
+    cursor: move;
+    box-shadow: 10px 10px 17px -1px rgba(0, 0, 0, 0.75); }
+
+.item_over_cart {
+  opacity: 0.6; }
+
+.test {
+  border: 1px solid #000;
+  background-color: yellowgreen;
+  width: 100px;
+  height: 100px; }
+
+#arrow_left {
+  float: left; }
+
+#arrow_right {
+  float: right; }
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  background-color: green;
+  position: relative;
+  margin-top: 6%;
+  cursor: pointer; }
+  .arrow:hover {
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.75); }
+  .arrow:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #000000;
+    border-right: 10px solid transparent; }
+  .arrow:first-child:after {
+    transform: rotate(45deg);
+    top: 5px;
+    left: 7px; }
+  .arrow:last-child:after {
+    transform: rotate(225deg);
+    top: 5px;
+    left: 2px; }
+
+/*# sourceMappingURL=style.css.map */
