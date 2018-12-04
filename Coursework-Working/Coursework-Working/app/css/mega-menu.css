@@ -1,0 +1,65 @@
+/* line 1, H:/GeekBrains/Brandshop/css/mega-menu.scss */
+.mega-menu {
+  width: 821px;
+  height: 310px;
+  padding-left: 25px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column wrap;
+  visibility: hidden;
+  z-index: 4;
+  background-color: #ffffff;
+  position: absolute; }
+  /* line 13, H:/GeekBrains/Brandshop/css/mega-menu.scss */
+  .mega-menu .mega-menu__img {
+    width: 255px;
+    height: 118px;
+    margin-top: 22px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url(../img/layer-42-man.png);
+    background-size: 100%;
+    opacity: .8;
+    transition: all 0.4s; }
+    /* line 24, H:/GeekBrains/Brandshop/css/mega-menu.scss */
+    .mega-menu .mega-menu__img:hover {
+      background-size: 140%;
+      opacity: 1; }
+    /* line 28, H:/GeekBrains/Brandshop/css/mega-menu.scss */
+    .mega-menu .mega-menu__img:active {
+      transform: scaleX(-1); }
+
+/* line 35, H:/GeekBrains/Brandshop/css/mega-menu.scss */
+.nav ul .nav__women:hover .mega-menu {
+  visibility: visible; }
+
+/* line 40, H:/GeekBrains/Brandshop/css/mega-menu.scss */
+.mega-menu__block {
+  width: 235px;
+  margin-top: 12px; }
+  /* line 44, H:/GeekBrains/Brandshop/css/mega-menu.scss */
+  .mega-menu__block ul li {
+    cursor: pointer;
+    float: none;
+    color: #646464;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.35px; }
+    /* line 52, H:/GeekBrains/Brandshop/css/mega-menu.scss */
+    .mega-menu__block ul li:first-child {
+      color: #232323;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 32px;
+      text-transform: uppercase;
+      letter-spacing: 0.35px;
+      cursor: default;
+      border-bottom: 1px solid #e8e8e8; }
+      /* line 61, H:/GeekBrains/Brandshop/css/mega-menu.scss */
+      .mega-menu__block ul li:first-child:hover {
+        background-color: #ffffff; }
+
+/*# sourceMappingURL=mega-menu.css.map */

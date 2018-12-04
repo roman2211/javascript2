@@ -1,0 +1,572 @@
+/* line 6, H:/GeekBrains/Brandshop/css/product.scss */
+.container .content .white-block_height-59 {
+  height: 59px; }
+
+/* line 9, H:/GeekBrains/Brandshop/css/product.scss */
+.container .content .main-content {
+  width: 1140px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; }
+  /* line 21, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .main-content .sidebar #accordion .card {
+    width: 243px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word; }
+  /* line 32, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .main-content .sidebar #accordion .card-header {
+    height: 37px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #e8e8e8; }
+    /* line 36, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .main-content .sidebar #accordion .card-header a {
+      text-decoration: none;
+      display: block;
+      height: 100%;
+      padding-left: 11px;
+      border-left: 5px solid #ef5b70;
+      color: #ef5b70;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+      line-height: 37px;
+      position: relative; }
+      /* line 59, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .sidebar #accordion .card-header a[aria-expanded="false"]::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 7px;
+        border: 4px solid transparent;
+        border-top: 5px solid #6f6e6e;
+        transition: all .2s; }
+      /* line 65, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .sidebar #accordion .card-header a[aria-expanded="true"]::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 7px;
+        border: 4px solid transparent;
+        border-top: 5px solid #ef5b70;
+        transform: rotate(180deg);
+        top: 12px;
+        transition: all .2s; }
+      /* line 72, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .sidebar #accordion .card-header a:hover {
+        background-color: #e8e8e8; }
+  /* line 77, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .main-content .sidebar #accordion .collapse {
+    display: none; }
+  /* line 80, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .main-content .sidebar #accordion .collapse.show {
+    display: block; }
+  /* line 83, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .main-content .sidebar #accordion .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding-top: 3px;
+    padding-left: 22px; }
+    /* line 89, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .main-content .sidebar #accordion .card-body ul li {
+      list-style: none;
+      color: #6f6e6e;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 400;
+      line-height: 33px;
+      position: relative; }
+      /* line 97, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .sidebar #accordion .card-body ul li::before {
+        content: " ";
+        display: block;
+        visibility: hidden;
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        top: 14px;
+        left: -13px;
+        background-color: #ef5b70;
+        border: 2px solid #ef5b70;
+        border-radius: 50%; }
+      /* line 110, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .sidebar #accordion .card-body ul li:hover {
+        background-color: #e8e8e8; }
+        /* line 112, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .sidebar #accordion .card-body ul li:hover::before {
+          visibility: visible; }
+        /* line 115, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .sidebar #accordion .card-body ul li:hover:active {
+          background-color: #cfcfcf; }
+  /* line 122, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .main-content .sidebar #accordion .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease; }
+  /* line 131, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .main-content .rightbar .top-filter {
+    width: 846px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-between; }
+    /* line 156, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .main-content .rightbar .top-filter .top-filter__trending-now .trending-now_text {
+      color: #6f6e6e;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase; }
+    /* line 159, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .main-content .rightbar .top-filter .top-filter__trending-now .trending-now_menu {
+      width: 176px;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between; }
+      /* line 168, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__trending-now .trending-now_menu input {
+        display: none; }
+        /* line 171, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .top-filter .top-filter__trending-now .trending-now_menu input:checked + label {
+          color: #ef5b70; }
+      /* line 176, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__trending-now .trending-now_menu label {
+        cursor: pointer;
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px; }
+      /* line 179, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__trending-now .trending-now_menu div {
+        color: #dfdfdf;
+        margin: 0 2px 0; }
+    /* line 185, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .main-content .rightbar .top-filter .top-filter__size {
+      width: 234px; }
+      /* line 187, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__size .size_text {
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        text-transform: uppercase; }
+      /* line 191, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__size .size-menu input {
+        display: none; }
+        /* line 193, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .top-filter .top-filter__size .size-menu input:checked + label {
+          color: #ef5b70; }
+          /* line 195, H:/GeekBrains/Brandshop/css/product.scss */
+          .container .content .main-content .rightbar .top-filter .top-filter__size .size-menu input:checked + label::after {
+            content: "\2713";
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+            font-size: 15px;
+            color: #000;
+            text-align: center;
+            line-height: 15px;
+            position: absolute;
+            top: 1px;
+            left: -22px; }
+      /* line 208, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__size .size-menu label {
+        cursor: pointer;
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        text-transform: uppercase;
+        position: relative;
+        margin-left: 45px; }
+        /* line 213, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .top-filter .top-filter__size .size-menu label:first-of-type {
+          margin-left: 24px; }
+        /* line 216, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .top-filter .top-filter__size .size-menu label:nth-of-type(5) {
+          margin-left: 24px; }
+        /* line 219, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .top-filter .top-filter__size .size-menu label::before {
+          content: " ";
+          position: absolute;
+          top: 1px;
+          left: -24px;
+          display: block;
+          width: 13px;
+          height: 13px;
+          border: 1px solid #ebebeb;
+          background-color: #ffffff; }
+    /* line 234, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .main-content .rightbar .top-filter .top-filter__price .price_text {
+      color: #6f6e6e;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase; }
+    /* line 237, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .main-content .rightbar .top-filter .top-filter__price .price_menu {
+      margin-top: 9px;
+      cursor: pointer;
+      color: #6f6e6e;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 26px; }
+      /* line 240, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__price .price_menu input[type="text"] {
+        border: 0;
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px; }
+    /* line 249, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .main-content .rightbar .top-filter .top-filter__filters {
+      width: 846px;
+      height: 50px;
+      background-color: #f3f3f3;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin-top: 41px; }
+      /* line 262, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__filters .filters_sort-by div {
+        cursor: pointer;
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        cursor: default;
+        width: 66px;
+        height: 30px;
+        background-color: #fff;
+        outline: 1px solid #ebebeb;
+        text-align: center;
+        margin-left: 9px;
+        float: left;
+        margin-top: 1px; }
+      /* line 274, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__filters .filters_sort-by select {
+        border: 1px solid #ebebeb;
+        width: 86px;
+        height: 32px;
+        outline: none;
+        cursor: pointer;
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        /*for WebKit*/
+        -webkit-appearance: none;
+        /* for FF */
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+        /* for IE */
+        -ms-appearance: none;
+        appearance: none !important;
+        padding-left: 11px;
+        background-image: url(../img/triangle.png);
+        background-position: 68px center;
+        background-repeat: no-repeat; }
+      /* line 296, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__filters .filters_show div {
+        cursor: pointer;
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        cursor: default;
+        width: 55px;
+        height: 30px;
+        background-color: #fff;
+        outline: 1px solid #ebebeb;
+        text-align: center;
+        margin-left: 10px;
+        float: left;
+        margin-top: 1px; }
+      /* line 308, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .top-filter .top-filter__filters .filters_show select {
+        border: 1px solid #ebebeb;
+        width: 63px;
+        height: 32px;
+        outline: none;
+        cursor: pointer;
+        color: #6f6e6e;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        /*for WebKit*/
+        -webkit-appearance: none;
+        /* for FF */
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+        /* for IE */
+        -ms-appearance: none;
+        appearance: none !important;
+        padding-left: 11px;
+        background-image: url(../img/triangle.png);
+        background-position: 44px center;
+        background-repeat: no-repeat; }
+  /* line 331, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .main-content .rightbar .product-main {
+    width: 846px; }
+    /* line 333, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .main-content .rightbar .product-main .showcase {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between; }
+      /* line 345, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem:nth-child(1) .for-product {
+        background-image: url("../img/product/1.png"); }
+      /* line 345, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem:nth-child(2) .for-product {
+        background-image: url("../img/product/2.png"); }
+      /* line 345, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem:nth-child(3) .for-product {
+        background-image: url("../img/product/3.png"); }
+      /* line 345, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem:nth-child(4) .for-product {
+        background-image: url("../img/product/4.png"); }
+      /* line 345, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem:nth-child(5) .for-product {
+        background-image: url("../img/product/5.png"); }
+      /* line 345, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem:nth-child(6) .for-product {
+        background-image: url("../img/product/6.png"); }
+      /* line 345, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem:nth-child(7) .for-product {
+        background-image: url("../img/product/7.png"); }
+      /* line 345, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem:nth-child(8) .for-product {
+        background-image: url("../img/product/8.png"); }
+      /* line 345, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem:nth-child(9) .for-product {
+        background-image: url("../img/product/9.png"); }
+      /* line 350, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem::after {
+        border-radius: 3px;
+        display: none; }
+      /* line 354, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on {
+        position: absolute;
+        top: 98px;
+        left: 70px;
+        display: none; }
+        /* line 359, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__cart {
+          width: 95px;
+          height: 41px;
+          padding-left: 28px;
+          border: 1px solid #ffffff;
+          border-radius: 3px;
+          color: #ffffff;
+          background-image: url(../img/forma-1-copy.png);
+          background-repeat: no-repeat;
+          background-position: 12px 10px;
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 41px;
+          text-align: center;
+          cursor: pointer; }
+          /* line 374, H:/GeekBrains/Brandshop/css/product.scss */
+          .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__cart:hover {
+            background-image: url(../img/forma-1-copy-pink.png);
+            color: #ef5b70; }
+        /* line 379, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__refresh, .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__like {
+          width: 57px;
+          height: 38px;
+          margin-top: 8px;
+          border-radius: 3px;
+          border: 1px solid #ffffff;
+          background-image: url(../img/hover-refresh.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          cursor: pointer;
+          float: left;
+          position: relative; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(359deg); } }
+          /* line 399, H:/GeekBrains/Brandshop/css/product.scss */
+          .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__refresh:after, .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__like:after {
+            position: absolute;
+            top: 0;
+            content: "";
+            width: 57px;
+            height: 38px;
+            background-image: url(../img/hover-refresh-pink.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            visibility: hidden; }
+          /* line 410, H:/GeekBrains/Brandshop/css/product.scss */
+          .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__refresh:hover, .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__like:hover {
+            background-image: url(../img/hover-refresh-pink.png); }
+          /* line 413, H:/GeekBrains/Brandshop/css/product.scss */
+          .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__refresh:active, .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__like:active {
+            background-image: none; }
+            /* line 415, H:/GeekBrains/Brandshop/css/product.scss */
+            .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__refresh:active::after, .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__like:active::after {
+              visibility: visible;
+              animation: spin .3s linear 1; }
+        /* line 421, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__like {
+          background-image: url(../img/hover-like.png);
+          float: right; }
+          /* line 425, H:/GeekBrains/Brandshop/css/product.scss */
+          .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__like:hover {
+            background-image: url(../img/hover-like-pink.png); }
+          /* line 428, H:/GeekBrains/Brandshop/css/product.scss */
+          .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__like:active {
+            background-image: none; }
+            /* line 430, H:/GeekBrains/Brandshop/css/product.scss */
+            .container .content .main-content .rightbar .product-main .showcase .gooditem .hover-on .hover-on__like:active::after {
+              background-image: url(../img/hover-like-pink.png);
+              visibility: visible; }
+      /* line 438, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .showcase .gooditem:hover .hover-on {
+        display: block; }
+    /* line 444, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .main-content .rightbar .product-main .pagination {
+      margin-top: 41px;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between; }
+      /* line 452, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .pagination .pagination_page-number {
+        width: 261px;
+        height: 44px;
+        border-radius: 3px;
+        border: 1px solid #ebebeb;
+        background-color: #ffffff; }
+        /* line 458, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .product-main .pagination .pagination_page-number ul {
+          list-style-type: none;
+          margin-top: 11px;
+          margin-left: 25px; }
+          /* line 468, H:/GeekBrains/Brandshop/css/product.scss */
+          .container .content .main-content .rightbar .product-main .pagination .pagination_page-number ul li {
+            float: left;
+            color: #c4c4c4;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            margin-right: 10px; }
+            /* line 476, H:/GeekBrains/Brandshop/css/product.scss */
+            .container .content .main-content .rightbar .product-main .pagination .pagination_page-number ul li:hover {
+              color: #ef5b70; }
+            /* line 479, H:/GeekBrains/Brandshop/css/product.scss */
+            .container .content .main-content .rightbar .product-main .pagination .pagination_page-number ul li div {
+              display: inline-block;
+              margin-top: 5px; }
+            /* line 483, H:/GeekBrains/Brandshop/css/product.scss */
+            .container .content .main-content .rightbar .product-main .pagination .pagination_page-number ul li .pagination_page-number_left {
+              height: 14px;
+              width: 8px;
+              background-image: url(../img/arrow-sprite-new.png);
+              background-position: 0px -1px; }
+              /* line 485, H:/GeekBrains/Brandshop/css/product.scss */
+              .container .content .main-content .rightbar .product-main .pagination .pagination_page-number ul li .pagination_page-number_left:hover {
+                background-position: 0px 13px; }
+            /* line 489, H:/GeekBrains/Brandshop/css/product.scss */
+            .container .content .main-content .rightbar .product-main .pagination .pagination_page-number ul li .pagination_page-number_right {
+              height: 14px;
+              width: 8px;
+              background-image: url(../img/arrow-sprite-new.png);
+              background-position: 8px -1px; }
+              /* line 491, H:/GeekBrains/Brandshop/css/product.scss */
+              .container .content .main-content .rightbar .product-main .pagination .pagination_page-number ul li .pagination_page-number_right:hover {
+                background-position: 8px 13px; }
+            /* line 495, H:/GeekBrains/Brandshop/css/product.scss */
+            .container .content .main-content .rightbar .product-main .pagination .pagination_page-number ul li:first-child {
+              margin-right: 20px; }
+            /* line 498, H:/GeekBrains/Brandshop/css/product.scss */
+            .container .content .main-content .rightbar .product-main .pagination .pagination_page-number ul li:last-child {
+              margin-right: 0;
+              margin-left: 10px; }
+      /* line 505, H:/GeekBrains/Brandshop/css/product.scss */
+      .container .content .main-content .rightbar .product-main .pagination .pagination_view-all {
+        width: 150px;
+        height: 32px;
+        padding-top: 12px;
+        border-radius: 3px;
+        border: 1px solid #ef5b70;
+        background-color: #ffffff;
+        color: #ef5b70;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer; }
+        /* line 517, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .product-main .pagination .pagination_view-all:hover {
+          box-shadow: 2px 2px 7px 0 #000000; }
+        /* line 520, H:/GeekBrains/Brandshop/css/product.scss */
+        .container .content .main-content .rightbar .product-main .pagination .pagination_view-all:active {
+          background-color: #ef5b70;
+          color: #fff; }
+
+/* line 529, H:/GeekBrains/Brandshop/css/product.scss */
+.container .content .feature-product {
+  height: auto;
+  width: auto; }
+  /* line 532, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .feature-product .feature_box {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-image: none; }
+  /* line 540, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .feature-product .feature_box_off {
+    display: none; }
+  /* line 543, H:/GeekBrains/Brandshop/css/product.scss */
+  .container .content .feature-product .feature_box_prop {
+    width: 17%;
+    height: auto;
+    margin: 89px 0 114px;
+    padding-left: 0;
+    padding-top: 50px;
+    background-position: top;
+    text-align: center; }
+    /* line 551, H:/GeekBrains/Brandshop/css/product.scss */
+    .container .content .feature-product .feature_box_prop p {
+      padding-top: 10px;
+      font-size: 12px;
+      width: 100%; }
+
+/*# sourceMappingURL=product.css.map */
