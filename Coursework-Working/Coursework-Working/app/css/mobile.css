@@ -1,0 +1,530 @@
+@media screen and (max-width: 992px) {
+  /* line 17, H:/GeekBrains/Brandshop/css/mobile.scss */
+  body {
+    width: 100%;
+    height: 100%; }
+  /* line 21, H:/GeekBrains/Brandshop/css/mobile.scss */
+  .container {
+    width: 100%;
+    position: relative; }
+    /* line 24, H:/GeekBrains/Brandshop/css/mobile.scss */
+    .container .header {
+      position: absolute;
+      width: 100%;
+      height: 75px; }
+      /* line 29, H:/GeekBrains/Brandshop/css/mobile.scss */
+      .container .header .header_top {
+        width: 100%;
+        display: -webkit-inline-flex;
+        display: -moz-inline-flex;
+        display: -ms-inline-flex;
+        display: -o-inline-flex;
+        display: inline-flex;
+        padding-left: 0;
+        height: 75px; }
+        /* line 38, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .header .header_top .logo {
+          width: 75px;
+          height: 75px;
+          background-color: black;
+          background-repeat: no-repeat;
+          background-position: 7px, 10px;
+          z-index: 5;
+          margin-right: 0; }
+          /* line 12, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .logo:hover {
+            background-color: #333333; }
+          /* line 47, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .logo a {
+            width: 75px;
+            height: 75px; }
+        /* line 52, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .header .header_top .dropdown_menu {
+          display: none; }
+        /* line 55, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .header .header_top .search_box {
+          flex-grow: 1; }
+          /* line 57, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .search_box .search_btn {
+            width: 75px;
+            height: 75px;
+            background-size: 26px;
+            z-index: 5;
+            background-position: center; }
+            /* line 6, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .header .header_top .search_box .search_btn:hover {
+              background-color: #f8b3bc; }
+          /* line 65, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .search_box input[type="search"] {
+            position: fixed;
+            top: 77px;
+            left: -262px;
+            height: 75px;
+            font-size: 25px;
+            opacity: 0;
+            border: 2px solid #f1e4e6;
+            transition: left .6s, opacity 1s; }
+            /* line 74, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .header .header_top .search_box input[type="search"]::-webkit-input-placeholder {
+              font-size: 20px; }
+            /* line 77, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .header .header_top .search_box input[type="search"]::-moz-placeholder {
+              font-size: 20px; }
+          /* line 82, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .search_box #search-btn:checked + input {
+            opacity: .6;
+            left: 0;
+            z-index: 5;
+            width: 200px; }
+            /* line 87, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .header .header_top .search_box #search-btn:checked + input:focus {
+              opacity: 1;
+              outline-color: #f16d7f; }
+        /* line 98, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .header .header_top .logo_text,
+        .container .header .header_top .logo_text_d {
+          display: none; }
+        /* line 102, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .header .header_top .acc_btn {
+          order: 1;
+          width: 75px;
+          height: 75px;
+          cursor: pointer;
+          z-index: 5;
+          background-image: url(../img/acc-button-mobile.png);
+          background-repeat: no-repeat;
+          background-position: center; }
+          /* line 6, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .acc_btn:hover {
+            background-color: #f8b3bc; }
+          /* line 112, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .acc_btn a {
+            display: none; }
+        /* line 116, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .header .header_top .shp_cart {
+          order: 2;
+          margin: 0;
+          width: 75px;
+          height: 75px;
+          z-index: 5;
+          background-image: url(../img/cart-mobile.png);
+          background-repeat: no-repeat;
+          background-color: #000;
+          background-position: center; }
+          /* line 12, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .shp_cart:hover {
+            background-color: #333333; }
+          /* line 127, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .shp_cart::after {
+            left: 43px;
+            bottom: 39px; }
+          /* line 132, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .shp_cart:hover .shp_cart__menu {
+            display: none; }
+          /* line 136, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_top .shp_cart .shp_cart__menu {
+            display: none; }
+      /* line 141, H:/GeekBrains/Brandshop/css/mobile.scss */
+      .container .header .header_menu {
+        position: absolute;
+        top: 0;
+        right: 148px;
+        height: 75px; }
+        /* line 146, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .header .header_menu .nav {
+          z-index: 5;
+          width: 75px;
+          height: 75px;
+          position: relative; }
+          /* line 6, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_menu .nav:hover {
+            background-color: #f8b3bc; }
+          /* line 152, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_menu .nav label {
+            display: block;
+            width: 75px;
+            height: 75px;
+            background-image: url(../img/mobile-menu.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer; }
+          /* line 161, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .header .header_menu .nav ul {
+            flex-direction: column;
+            position: fixed;
+            width: 133px;
+            right: -152px;
+            opacity: 0;
+            background-color: #fff; }
+            /* line 168, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .header .header_menu .nav ul li {
+              transition: padding-right, .5s; }
+              /* line 170, H:/GeekBrains/Brandshop/css/mobile.scss */
+              .container .header .header_menu .nav ul li a {
+                position: relative; }
+                /* line 172, H:/GeekBrains/Brandshop/css/mobile.scss */
+                .container .header .header_menu .nav ul li a::before {
+                  content: " ";
+                  display: block;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 0;
+                  height: 100%;
+                  border-bottom: 2px solid #f16d7f;
+                  transition: width, .3s; }
+              /* line 184, H:/GeekBrains/Brandshop/css/mobile.scss */
+              .container .header .header_menu .nav ul li:hover {
+                padding-right: 10px; }
+                /* line 186, H:/GeekBrains/Brandshop/css/mobile.scss */
+                .container .header .header_menu .nav ul li:hover a {
+                  color: #f16d7f; }
+                  /* line 188, H:/GeekBrains/Brandshop/css/mobile.scss */
+                  .container .header .header_menu .nav ul li:hover a::before {
+                    width: 100%; }
+              /* line 194, H:/GeekBrains/Brandshop/css/mobile.scss */
+              .container .header .header_menu .nav ul li:not(:hover) a {
+                transition: color 1s; }
+              /* line 198, H:/GeekBrains/Brandshop/css/mobile.scss */
+              .container .header .header_menu .nav ul li a {
+                text-align: right; }
+            /* line 202, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .header .header_menu .nav ul .mega-menu {
+              display: none; }
+    /* line 209, H:/GeekBrains/Brandshop/css/mobile.scss */
+    .container .content {
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: 0; }
+      /* line 214, H:/GeekBrains/Brandshop/css/mobile.scss */
+      .container .content .slider {
+        background-color: #f1e4e6;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center; }
+        /* line 223, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .slider .slider__bgi {
+          width: 70%;
+          height: 100%;
+          background-image: url(../img/slider-bg-mobile.png);
+          background-clip: border-box;
+          background-position: top;
+          background-repeat: no-repeat;
+          float: none;
+          transition: opacity .6s, width 1s; }
+        /* line 233, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .slider .the_brand {
+          position: static; }
+      /* line 237, H:/GeekBrains/Brandshop/css/mobile.scss */
+      .container .content .category {
+        flex-flow: row wrap;
+        width: 71.25%;
+        height: auto;
+        justify-content: space-between; }
+        /* line 242, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .category .hot_deal {
+          background: none;
+          color: #fff;
+          margin-left: -35%;
+          top: 25%;
+          left: 50%;
+          padding: 0;
+          text-align: center;
+          text-align: -webkit-center; }
+          /* line 251, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .category .hot_deal::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 110px;
+            background-color: #fff;
+            margin-top: 13px; }
+        /* line 277, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .category .category_1 {
+          order: 1;
+          width: 196px;
+          height: 161px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover; }
+        /* line 280, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .category .category_2 {
+          order: 2;
+          width: 196px;
+          height: 161px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover; }
+        /* line 283, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .category .category_3 {
+          order: 3;
+          width: 196px;
+          height: 161px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          margin-top: 98px; }
+        /* line 287, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .category .category_4 {
+          order: 4;
+          width: 196px;
+          height: 161px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 100%;
+          background-image: url(../img/accessories-mobile.png); }
+          /* line 291, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .category .category_4 .hot_deal {
+            margin-left: -16%; }
+        /* line 295, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .category .category_1::before,
+        .container .content .category .category_2::before,
+        .container .content .category .category_3::before,
+        .container .content .category .category_4::before {
+          content: " ";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: #211616;
+          opacity: .7;
+          filter: brightness(136%); }
+      /* line 303, H:/GeekBrains/Brandshop/css/mobile.scss */
+      .container .content .product {
+        margin-top: 30px;
+        flex-flow: row wrap;
+        width: 71.25%;
+        height: auto;
+        justify-content: space-between; }
+        /* line 310, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .product .showcase .gooditem {
+          width: 210px; }
+          /* line 313, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem::after {
+            left: 51px; }
+          /* line 316, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem .image {
+            width: auto;
+            background-position: center;
+            background-size: contain;
+            height: 255px; }
+          /* line 322, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem a {
+            color: #ffffff;
+            position: relative;
+            height: 84px; }
+            /* line 326, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .content .product .showcase .gooditem a p {
+              margin-top: 52px;
+              padding: 0; }
+            /* line 330, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .content .product .showcase .gooditem a::before {
+              content: "Ellery x M'O Capsule";
+              display: inline-block;
+              position: absolute;
+              top: 6px;
+              color: #000000;
+              font-size: 13px;
+              font-weight: 400;
+              line-height: 20px;
+              text-transform: uppercase;
+              letter-spacing: 0.33px; }
+            /* line 342, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .content .product .showcase .gooditem a::after {
+              content: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.";
+              display: block;
+              position: absolute;
+              color: #5d5d5d;
+              font-size: 10px;
+              font-weight: 300;
+              line-height: 16px;
+              letter-spacing: 0.35px;
+              text-transform: none;
+              top: 28px; }
+          /* line 356, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem:first-child .image {
+            background-image: url("../img/good-item-1.png");
+            background-color: #f7e4e2; }
+          /* line 356, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem:nth-child(2) .image {
+            background-image: url("../img/good-item-2.png");
+            background-color: #ffffff; }
+          /* line 356, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem:nth-child(3) .image {
+            background-image: url("../img/good-item-3.png");
+            background-color: #f7f2e2; }
+          /* line 356, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem:nth-child(4) .image {
+            background-image: url("../img/good-item-4.png");
+            background-color: #def2f3; }
+          /* line 356, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem:nth-child(5) .image {
+            background-image: url("../img/good-item-5.png");
+            background-color: #ebf3de; }
+          /* line 377, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem:nth-child(6) {
+            display: none; }
+          /* line 380, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem:nth-child(7) {
+            display: none; }
+          /* line 356, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .showcase .gooditem:last-child .image {
+            background-image: url("../img/good-item-6.png");
+            background-color: #efe3f4; }
+        /* line 388, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .product .browse_products {
+          background-color: #ffffff;
+          color: #f16d7f;
+          outline: 1px solid #f16d7f; }
+          /* line 392, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .product .browse_products:hover {
+            box-shadow: 2px 2px 7px 0 #000000; }
+      /* line 397, H:/GeekBrains/Brandshop/css/mobile.scss */
+      .container .content .feature {
+        width: 100%;
+        margin: 0 auto;
+        height: auto; }
+        /* line 401, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .feature .feature_box {
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: auto;
+          background-image: none; }
+          /* line 409, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .feature .feature_box .feature_box_off {
+            display: none; }
+          /* line 412, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .feature .feature_box .feature_box_prop {
+            width: 32%;
+            height: auto;
+            margin: 89px 0 114px;
+            padding-left: 0;
+            padding-top: 50px;
+            background-position: top;
+            text-align: center; }
+            /* line 421, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .content .feature .feature_box .feature_box_prop p {
+              padding-top: 10px;
+              font-size: 12px;
+              width: 100%; }
+      /* line 429, H:/GeekBrains/Brandshop/css/mobile.scss */
+      .container .content .subscribe {
+        height: 500px;
+        width: 100%;
+        margin: 0 auto;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-flow: row wrap;
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        align-items: center;
+        justify-content: center; }
+        /* line 444, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .subscribe .logo-bar {
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flex;
+          display: -o-flex;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          width: 36.5%;
+          order: 1;
+          height: 230px; }
+          /* line 455, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .subscribe .logo-bar .logo-bar__item {
+            width: 48%;
+            height: 107px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat; }
+            /* line 461, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .content .subscribe .logo-bar .logo-bar__item:first-child {
+              background-image: url(../img/logo-bar-item-1.png); }
+            /* line 464, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .content .subscribe .logo-bar .logo-bar__item:nth-child(2) {
+              background-image: url(../img/logo-bar-item-2.png); }
+            /* line 467, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .content .subscribe .logo-bar .logo-bar__item:nth-child(3) {
+              background-image: url(../img/logo-bar-item-3.png); }
+            /* line 470, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .content .subscribe .logo-bar .logo-bar__item:last-child {
+              background-image: url(../img/logo-bar-item-4.png); }
+        /* line 475, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .subscribe .owl-carousel {
+          order: 3;
+          float: none;
+          margin: 0;
+          height: 250px; }
+          /* line 480, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .subscribe .owl-carousel .owl-dots {
+            margin: 0;
+            text-align: center; }
+          /* line 484, H:/GeekBrains/Brandshop/css/mobile.scss */
+          .container .content .subscribe .owl-carousel .owl-review {
+            text-align: center;
+            text-align: -webkit-center; }
+            /* line 487, H:/GeekBrains/Brandshop/css/mobile.scss */
+            .container .content .subscribe .owl-carousel .owl-review img {
+              float: none; }
+        /* line 492, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .subscribe .subscribe_box {
+          order: 2;
+          float: none;
+          margin: 0; }
+        /* line 497, H:/GeekBrains/Brandshop/css/mobile.scss */
+        .container .content .subscribe .vertical-line {
+          display: none; }
+    /* line 503, H:/GeekBrains/Brandshop/css/mobile.scss */
+    .container .footer .footer_bottom {
+      width: auto;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      /* line 517, H:/GeekBrains/Brandshop/css/mobile.scss */
+      .container .footer .footer_bottom .copyright {
+        margin: 0;
+        padding: 0;
+        float: none; }
+      /* line 520, H:/GeekBrains/Brandshop/css/mobile.scss */
+      .container .footer .footer_bottom .footer_icons {
+        margin: 0;
+        padding: 0;
+        float: none; } }
+
+@media screen and (max-width: 830px) {
+  /* line 532, H:/GeekBrains/Brandshop/css/mobile.scss */
+  .container .content .slider .slider__bgi {
+    opacity: 0;
+    width: 0; }
+  /* line 539, H:/GeekBrains/Brandshop/css/mobile.scss */
+  .container .content .category .category_1, .container .content .category .category_2, .container .content .category .category_3 {
+    width: 196px;
+    margin-top: 22px; }
+  /* line 551, H:/GeekBrains/Brandshop/css/mobile.scss */
+  .container .content .category .category_4 .hot_deal {
+    left: 32%; }
+  /* line 558, H:/GeekBrains/Brandshop/css/mobile.scss */
+  .container .content .feature .feature_box {
+    justify-content: center; }
+    /* line 560, H:/GeekBrains/Brandshop/css/mobile.scss */
+    .container .content .feature .feature_box .feature_box_prop {
+      margin: 22px 0;
+      width: 308px; } }
+
+/*# sourceMappingURL=mobile.css.map */

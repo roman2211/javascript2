@@ -1,0 +1,57 @@
+@keyframes fright {
+  from {
+    transform: translateX(0px); }
+  to {
+    transform: translateX(-30px); } }
+
+/* line 17, H:/GeekBrains/Brandshop/css/label.scss */
+.nav .nav__menu {
+  transition: right 1s, opacity 1s; }
+
+/* line 20, H:/GeekBrains/Brandshop/css/label.scss */
+.nav #menu {
+  display: none; }
+  /* line 22, H:/GeekBrains/Brandshop/css/label.scss */
+  .nav #menu:checked ~ .nav__menu {
+    right: 0px;
+    opacity: 1; }
+    /* line 26, H:/GeekBrains/Brandshop/css/label.scss */
+    .nav #menu:checked ~ .nav__menu li:first-child {
+      animation: fright .3s 2;
+      animation-delay: 0.3s;
+      animation-direction: alternate; }
+    /* line 29, H:/GeekBrains/Brandshop/css/label.scss */
+    .nav #menu:checked ~ .nav__menu li:nth-child(2) {
+      animation: fright .3s 2;
+      animation-delay: 0.35s;
+      animation-direction: alternate; }
+    /* line 32, H:/GeekBrains/Brandshop/css/label.scss */
+    .nav #menu:checked ~ .nav__menu li:nth-child(3) {
+      animation: fright .3s 2;
+      animation-delay: 0.4s;
+      animation-direction: alternate; }
+    /* line 35, H:/GeekBrains/Brandshop/css/label.scss */
+    .nav #menu:checked ~ .nav__menu li:nth-child(4) {
+      animation: fright .3s 2;
+      animation-delay: 0.45s;
+      animation-direction: alternate; }
+    /* line 38, H:/GeekBrains/Brandshop/css/label.scss */
+    .nav #menu:checked ~ .nav__menu li:nth-child(5) {
+      animation: fright .3s 2;
+      animation-delay: 0.5s;
+      animation-direction: alternate; }
+    /* line 41, H:/GeekBrains/Brandshop/css/label.scss */
+    .nav #menu:checked ~ .nav__menu li:nth-child(6) {
+      animation: fright .3s 2;
+      animation-delay: 0.55s;
+      animation-direction: alternate; }
+    /* line 44, H:/GeekBrains/Brandshop/css/label.scss */
+    .nav #menu:checked ~ .nav__menu li:last-child {
+      animation: fright .3s 2;
+      animation-delay: 0.6s;
+      animation-direction: alternate; }
+    /* line 48, H:/GeekBrains/Brandshop/css/label.scss */
+    .nav #menu:checked ~ .nav__menu label {
+      display: none; }
+
+/*# sourceMappingURL=label.css.map */
